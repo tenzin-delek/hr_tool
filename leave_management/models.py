@@ -23,7 +23,6 @@ class LeaveBalance(models.Model):
     )
     sl = models.IntegerField(
         default=0,
-        # Example constraints
         validators=[MinValueValidator(0), MaxValueValidator(100)],
     )
     wfh = models.IntegerField(
