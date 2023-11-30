@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Upload Leave Balance</h2>
+    <form method="post" enctype="multipart/form-data" style="max-width: 400px; margin: auto;">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <button type="submit" style="background-color: #4caf50; color: white; padding: 10px; border: none; cursor: pointer; border-radius: 5px;">Upload</button>
+    </form>
+{% endblock %}
